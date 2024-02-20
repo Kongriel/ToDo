@@ -1,0 +1,254 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: rgb(37, 37, 40);
+  color: white;
+  font-family: "Poppins", sans-serif;
+  min-height: 100vh;
+}
+
+h1 {
+  min-height: 20vh;
+  display: flex;
+  justify-content: center;
+  font-size: 3rem;
+  align-items: center;
+  margin-top: 5rem;
+}
+form {
+  min-height: 20vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+form input {
+  padding: 0.5rem;
+  padding-left: 1rem;
+  font-size: 1.8rem;
+  border: none;
+  background: white;
+  border-radius: 16px;
+}
+
+form button {
+  padding: 0.5rem;
+  padding-left: 1rem;
+  font-size: 1.8rem;
+  border: none;
+  color: green;
+  border-radius: 16px;
+}
+
+form button {
+  color: rgb(43, 177, 48);
+  background-color: rgba(0, 0, 0, 0);
+
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin-left: 0.5rem;
+}
+form button i {
+  font-size: 3.2rem;
+}
+
+@keyframes blobAnimation {
+  0% {
+    transform: scale(1);
+  }
+  70% {
+    transform: scale(1.2);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.blob-animation {
+  animation: blobAnimation ease-in 0.13s;
+}
+
+.bx-plus-circle {
+  margin-top: 0.3rem;
+  margin-left: -8px;
+}
+
+.container {
+}
+
+.todo-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.todo-input::placeholder {
+  color: rgba(0, 0, 0, 0.327);
+}
+
+.todo-list {
+  min-width: 30%;
+  list-style: none;
+}
+
+.todo {
+  margin: 0.5rem;
+  padding-left: 0.5rem;
+  background: white;
+  color: black;
+  font-size: 1.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: 0.5s;
+  border-radius: 16px;
+}
+
+.todo li {
+  flex: 1;
+}
+
+.trash-btn,
+.complete-btn {
+  color: white;
+  border: none;
+  padding: 1rem;
+  cursor: pointer;
+  font-size: 1.5rem;
+}
+
+.complete-btn {
+  background: rgb(23, 159, 27);
+}
+
+.trash-btn {
+  border-top-right-radius: 16px;
+  border-bottom-right-radius: 16px;
+  background: rgb(154, 152, 158);
+}
+
+.todo-item {
+  padding: 0rem 0.5rem;
+}
+
+.fa-trash,
+.fa-check-circle {
+  pointer-events: none;
+}
+.shake-animation {
+  animation: shake 0.38s ease-in-out;
+}
+
+@keyframes shake {
+  0% {
+    transform: translateX(0);
+  }
+  25% {
+    transform: translateX(-7px);
+  }
+  50% {
+    transform: translateX(7px);
+  }
+  75% {
+    transform: translateX(-7px);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+.shak {
+  animation: shak 0.4s ease-in-out;
+}
+
+@keyframes shak {
+  0% {
+    transform: scale(0);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+}
+
+.completed {
+  text-decoration-style: double;
+  text-decoration: line-through;
+  opacity: 0.4;
+
+  animation: hop 0.13s;
+}
+
+@keyframes hop {
+  0% {
+    transform: scale(1);
+  }
+
+  5% {
+    transform: scale(1.05);
+  }
+  30% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+/* Define scale animation */
+.scale-anim {
+  animation: scaleIn 0.28s cubic-bezier(0.25, 0.46, 0.45, 0.94); /* Apply animation with cubic-bezier easing */
+}
+
+@keyframes scaleIn {
+  from {
+    transform: scale(0); /* Start from scale 0.6 */
+  }
+  to {
+    transform: scale(1); /* End at scale 1 */
+  }
+}
+
+.slide {
+  transform: translateX(600px);
+  opacity: 0;
+  transition: 0.21s;
+}
+
+select {
+  outline: none;
+  border: none;
+  font-size: 1rem;
+}
+
+.select {
+  margin: 1rem;
+  position: relative;
+  overflow: hidden;
+  border-radius: 16px;
+  background-color: white;
+}
+
+select {
+  width: 10rem;
+  height: 3.2rem;
+  cursor: pointer;
+  padding: 1rem;
+}
+
+.select::after {
+  position: absolute;
+
+  top: 0;
+  right: 0;
+  padding: 1rem;
+  pointer-events: none;
+  transition: all 0.3s ease;
+}
+
+.select:hover::after {
+  background: white;
+}
