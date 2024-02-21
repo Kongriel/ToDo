@@ -43,20 +43,17 @@ function addTodo(event) {
   trashButton.classList.add("trash-btn");
   todoDiv.appendChild(trashButton);
 
-  // Trigger animation when input field is clicked
-  todoButton.classList.add("blob-animation"); // Add the blob-animation class to todoButton
-
-  // Inserting the new todo at the top of the list
+  todoButton.classList.add("blob-animation");
 
   // Reset the input field value after adding todo
   todoInput.value = "";
 
-  // Remove the animation class after the animation ends
+  // Remove Animation
   todoButton.addEventListener("animationend", function () {
     todoButton.classList.remove("blob-animation");
   });
 
-  // Remove the animation class after the animation ends
+  // Remove Animation
   todoDiv.addEventListener("animationend", function () {
     todoDiv.classList.remove("scale-anim");
   });
@@ -160,7 +157,7 @@ function getLocalTodos() {
     newTodo.classList.add("todo-item");
     todoDiv.appendChild(newTodo);
 
-    // tilføj liste styling igen
+    // tilføj liste styling igen efter reload
     const completedButton = document.createElement("button");
     completedButton.innerHTML = '<i class="fas fa-check-circle"></i>';
     completedButton.classList.add("complete-btn");
@@ -187,3 +184,4 @@ function removeLocalTodos(todo) {
   todos = todos.filter((todoItem) => todoItem.task !== todoIndex);
   localStorage.setItem("todos", JSON.stringify(todos));
 }
+
